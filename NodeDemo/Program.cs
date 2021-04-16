@@ -1,22 +1,21 @@
 ﻿using System;
+using System.Windows.Controls;
+using System.Windows.Forms;
 
 namespace NodeDemo
 {
     class Program
     {
+        [STAThread]
+
         static void Main(string[] args)
         {
 
-            var nm = new NodeManager();
-            Console.Write("VAL\t{0}\t", nm.CurrentVal);
-            nm.Draw();
-            nm.CurrentVal = 650;
-            Console.Write("VAL\t{0}\t", nm.CurrentVal);
-            nm.Draw();
-            nm.CurrentVal = 649;
-            Console.Write("VAL\t{0}\t", nm.CurrentVal);
-            nm.Draw();
+           Application.EnableVisualStyles();
+            Application.Run(new MainForm()); 
             
         }
+        
     }
+
 }
